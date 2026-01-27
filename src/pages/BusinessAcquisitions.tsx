@@ -84,7 +84,7 @@ const BusinessAcquisitions = () => {
               <Button variant="hero" asChild>
                 <Link to="/contact">Submit Acquisition Profile</Link>
               </Button>
-              <Button variant="hero-outline" asChild>
+              <Button variant="heroOutline" asChild>
                 <Link to="/off-market-access">
                   <Lock className="w-4 h-4" />
                   View Opportunities

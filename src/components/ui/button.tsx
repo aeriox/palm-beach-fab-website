@@ -42,6 +42,14 @@ const buttonVariants = cva(
           "animate-glow-pulse",
         ].join(" "),
         subtle: "bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground rounded-md",
+        // Gold button variant
+        gold: "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:shadow-lg hover:-translate-y-0.5 font-semibold rounded-md transition-all duration-300",
+        // Elegant outline button
+        elegant: "border border-primary/50 bg-transparent text-primary hover:bg-primary/10 hover:border-primary rounded-md transition-all duration-300",
+        // Navy solid button
+        navy: "bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold rounded-md",
+        // Gold outline button
+        "gold-outline": "border border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground rounded-md transition-all duration-300",
       },
       size: {
         default: "h-10 px-6 py-2",

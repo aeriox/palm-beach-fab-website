@@ -129,7 +129,7 @@ const ResidentialBuyers = () => {
                   Search Properties
                 </Link>
               </Button>
-              <Button variant="hero-outline" asChild>
+              <Button variant="heroOutline" asChild>
                 <Link to="/contact">
                   Schedule a Consultation
                 </Link>
