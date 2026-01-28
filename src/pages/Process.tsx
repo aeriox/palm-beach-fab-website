@@ -9,7 +9,10 @@ import {
   Truck,
   CheckCircle2,
 } from "lucide-react";
-import heroCraftsmanship from "@/assets/hero-craftsmanship.jpg";
+import processConsultation from "@/assets/process-consultation.jpg";
+import processEngineering from "@/assets/process-engineering.jpg";
+import processProduction from "@/assets/process-production.jpg";
+import processInstallation from "@/assets/process-installation.jpg";
 
 const processSteps = [
   {
@@ -112,45 +115,48 @@ const Process = () => {
       <section className="py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="space-y-24">
-            {processSteps.map((step, index) => (
-              <div
-                key={step.number}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <span className="font-heading text-5xl font-bold text-accent/20">
-                      {step.number}
-                    </span>
-                    <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <step.icon className="h-7 w-7 text-accent" />
+            {processSteps.map((step, index) => {
+              const stepImages = [processConsultation, processEngineering, processProduction, processInstallation];
+              return (
+                <div
+                  key={step.number}
+                  className={`grid lg:grid-cols-2 gap-12 items-center ${
+                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
+                >
+                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                    <div className="flex items-center gap-4 mb-6">
+                      <span className="font-heading text-5xl font-bold text-accent/20">
+                        {step.number}
+                      </span>
+                      <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center">
+                        <step.icon className="h-7 w-7 text-accent" />
+                      </div>
                     </div>
+                    <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
+                      {step.title}
+                    </h2>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {step.description}
+                    </p>
+                    <ul className="space-y-3">
+                      {step.details.map((detail, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" />
+                          <span className="text-foreground">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h2 className="font-heading text-3xl font-semibold text-foreground mb-4">
-                    {step.title}
-                  </h2>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {step.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {step.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-                        <span className="text-foreground">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                    <div 
+                      className="aspect-[4/3] rounded-lg bg-cover bg-center shadow-medium"
+                      style={{ backgroundImage: `url(${stepImages[index]})` }}
+                    />
+                  </div>
                 </div>
-                <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <div 
-                    className="aspect-[4/3] rounded-lg bg-cover bg-center shadow-medium"
-                    style={{ backgroundImage: `url(${heroCraftsmanship})` }}
-                  />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
