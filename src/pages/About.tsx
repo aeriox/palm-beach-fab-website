@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroCraftsmanship from "@/assets/hero-craftsmanship.jpg";
+import rencoLogo from "@/assets/renco-logo.svg";
+import xactLogo from "@/assets/xact-logo.png";
 
 const coreValues = [
   {
@@ -31,10 +33,14 @@ const ecosystemPartners = [
   {
     name: "Xact Construction",
     description: "Full-service general contractor for luxury residential and commercial projects.",
+    logo: xactLogo,
+    url: "https://www.xactconstruction.com/",
   },
   {
     name: "RENCO",
     description: "Renovation and construction specialists focused on quality and efficiency.",
+    logo: rencoLogo,
+    url: "https://renco-usa.com/",
   },
 ];
 
@@ -157,11 +163,30 @@ const About = () => {
             {ecosystemPartners.map((partner) => (
               <div
                 key={partner.name}
-                className="bg-secondary p-8 rounded-lg text-center"
+                className="bg-secondary p-8 rounded-lg text-center flex flex-col items-center"
               >
-                <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
-                  {partner.name}
-                </h3>
+                <a 
+                  href={partner.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block mb-4 hover:opacity-80 transition-opacity"
+                >
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`}
+                    className="h-16 w-auto object-contain"
+                  />
+                </a>
+                <a 
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  <h3 className="font-heading text-2xl font-semibold text-foreground mb-3">
+                    {partner.name}
+                  </h3>
+                </a>
                 <p className="text-muted-foreground">{partner.description}</p>
               </div>
             ))}
