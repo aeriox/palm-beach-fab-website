@@ -6,6 +6,9 @@ import { Home, Building2, ArrowRight } from "lucide-react";
 import heroResidential from "@/assets/hero-residential.jpg";
 import heroCommercial from "@/assets/hero-commercial.jpg";
 import heroCraftsmanship from "@/assets/hero-craftsmanship.jpg";
+import portfolioMedicalCasework from "@/assets/portfolio-medical-casework.jpg";
+import portfolioEntertainmentWall from "@/assets/portfolio-entertainment-wall.jpg";
+import portfolioConferenceRoom from "@/assets/portfolio-conference-room.jpg";
 
 const categories = [
   { id: "all", label: "All Projects" },
@@ -43,7 +46,7 @@ const projects = [
     title: "Medical Office Casework",
     category: "commercial",
     description: "ADA-compliant nurse stations and reception casework",
-    image: heroCommercial,
+    image: portfolioMedicalCasework,
     tags: ["Medical", "Casework", "ADA-Compliant"],
   },
   {
@@ -51,7 +54,7 @@ const projects = [
     title: "Wellington Entertainment Wall",
     category: "residential",
     description: "Media center with integrated lighting and hidden components",
-    image: heroResidential,
+    image: portfolioEntertainmentWall,
     tags: ["Entertainment", "Media Center", "Lighting"],
   },
   {
@@ -59,7 +62,7 @@ const projects = [
     title: "Corporate Conference Room",
     category: "commercial",
     description: "Executive conference table and wall paneling",
-    image: heroCraftsmanship,
+    image: portfolioConferenceRoom,
     tags: ["Corporate", "Conference", "Paneling"],
   },
 ];
