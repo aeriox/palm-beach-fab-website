@@ -49,7 +49,7 @@ export function Footer() {
             <img 
               src={logo} 
               alt="Palm Beach Fabricators" 
-              className="h-32 w-auto mb-6"
+              className="h-32 w-auto mb-6 object-contain"
             />
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Luxury residential and high-precision commercial millwork. 
