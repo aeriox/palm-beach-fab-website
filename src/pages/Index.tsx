@@ -273,14 +273,14 @@ const Index = () => {
       </section>
 
       {/* Brand Statement */}
-      <section className="py-28 lg:py-36 bg-midnight text-white">
+      <section className="py-28 lg:py-36 bg-[#0C1C2E] text-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
-            <blockquote className="font-heading text-2xl md:text-3xl lg:text-5xl font-medium leading-relaxed mb-12">
+            <blockquote className="font-heading text-2xl md:text-3xl lg:text-5xl font-medium leading-relaxed mb-12 text-white drop-shadow-lg">
               "Palm Beach Fabricators is a luxury and commercial millwork company 
-              built on <span className="italic text-gradient-champagne">precision</span>, 
-              <span className="italic text-gradient-champagne"> engineering</span>, and 
-              <span className="italic text-gradient-champagne"> craftsmanship</span>."
+              built on <span className="italic text-champagne font-semibold">precision</span>, 
+              <span className="italic text-champagne font-semibold"> engineering</span>, and 
+              <span className="italic text-champagne font-semibold"> craftsmanship</span>."
             </blockquote>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Button variant="hero" size="lg" asChild>
