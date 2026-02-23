@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-transparent.png";
 
 const ScrollLink = ({ to, children, className }: { to: string; children: React.ReactNode; className?: string }) => {
   const navigate = useNavigate();
